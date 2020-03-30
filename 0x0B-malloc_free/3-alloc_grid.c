@@ -19,7 +19,7 @@ int **alloc_grid(int width, int height)
 			for (k = 0; k < i; ++k) {
 				free(new_array[k]);
 			}
-
+			free(new_array);
 			return (NULL);
 		};
 
