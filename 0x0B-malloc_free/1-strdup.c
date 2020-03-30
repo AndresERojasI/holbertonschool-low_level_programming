@@ -14,8 +14,6 @@ char *_strdup(char *str)
 	while (str[size])
 		size++;
 
-	printf("Size %lu\n", ((sizeof(char) * size) + 1));
-
 	new_str = (char *)malloc((sizeof(char) * size) + 1);
 
 	if(new_str == NULL) return (NULL);
