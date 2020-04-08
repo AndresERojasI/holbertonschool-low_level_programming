@@ -7,8 +7,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	int bytes_to_write;
 
 	if(filename == NULL) return (-1);
+	if(text_content == NULL) return (1);
 
-	file_descriptor = open(filename, O_WRONLY | O_APPEND);
+	file_descriptor = open(filename, O_WRONLY | O_APPEND | O_EXCL);
 	if (file_descriptor < 0) return (-1);
 
 	bytes_to_write = get_buffer_size(text_content);
