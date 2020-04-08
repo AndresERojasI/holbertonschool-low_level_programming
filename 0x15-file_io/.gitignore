@@ -2,3 +2,5 @@ tests/**
 output/**
 _putchar.c
 a
+b
+hello
