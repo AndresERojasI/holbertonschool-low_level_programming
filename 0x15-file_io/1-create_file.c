@@ -17,7 +17,7 @@ int create_file(const char *filename, char *text_content){
 	}
 
 	if(text_content == NULL){
-		bytes_written = write(file_descriptor, " ", 1);
+		bytes_written = write(file_descriptor, '', 1);
 	} else {
 		bytes_to_write = get_buffer_size(text_content);
 		bytes_written = write(file_descriptor, text_content, bytes_to_write);
