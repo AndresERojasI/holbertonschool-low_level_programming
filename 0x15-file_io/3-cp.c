@@ -19,8 +19,6 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	printf("File: %s\n", argv[2]);
-
 	file_descriptor_to =
 			open(argv[2], O_CREAT | O_WRONLY | O_EXCL, S_IRUSR | S_IWUSR);
 	if (file_descriptor_to < 0) {
