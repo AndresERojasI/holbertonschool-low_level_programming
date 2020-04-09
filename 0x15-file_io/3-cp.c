@@ -37,6 +37,7 @@ int main(int argc, char **argv)
 	file_from_bytes_read = 1;
 	while(file_from_bytes_read > 0) {
 		file_from_bytes_read = read(file_descriptor_from, buffer, 1024);
+		if(file_from_bytes_read == 0) break;
 		if(file_from_bytes_read < 0){
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
