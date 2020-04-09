@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 	}
 
 	file_descriptor_to =
-			open(argv[2], O_CREAT | O_WRONLY | O_EXCL, S_IRUSR | S_IWUSR);
+			open(argv[2], O_CREAT | O_WRONLY | O_EXCL, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (file_descriptor_to < 0) {
 		/* Raised failure on purpose, to check if the file already existed */
 		if (errno == EEXIST) {
